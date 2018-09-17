@@ -12,10 +12,6 @@ podTemplate(label: label, containers: [
                     sh 'gradle build'
                 }
         }
-        stage('Results') {
-            junit '**/target/surefire-reports/TEST-*.xml'
-            archive 'target/*.jar'
-        }
         
     }
 }
