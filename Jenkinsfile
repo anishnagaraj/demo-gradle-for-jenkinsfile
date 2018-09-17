@@ -7,9 +7,9 @@ podTemplate(label: label, containers: [
         stage('Preparation') {
             git 'https://github.com/anishnagaraj/demo-gradle-for-jenkinsfile.git'
         }
-        container('maven') {
+        container('gradle') {
                 stage('Build') {
-                    sh 'mvn package'
+                    sh 'gradle build'
                 }
         }
         stage('Results') {
