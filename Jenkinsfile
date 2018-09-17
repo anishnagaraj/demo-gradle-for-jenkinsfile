@@ -1,6 +1,6 @@
 def label = "mypod-${UUID.randomUUID().toString()}"
 podTemplate(label: label, containers: [
-    containerTemplate(name: 'gradle', image: 'ticketfly:jenkins-example-gradle-build:latest', ttyEnabled: true, command: 'cat')
+    containerTemplate(name: 'gradle', image: 'gradle:jdk8-alpine', ttyEnabled: true, command: 'cat')
   ]) {
 
     node(label) {
